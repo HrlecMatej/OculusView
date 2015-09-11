@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53F8C64B-68E9-48CD-A45C-C617645FABC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OculusStreetViewHyperlapse</RootNamespace>
+    <AssemblyName>OculusStreetViewHyperlapse</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <NuGetPackageImportStamp>d90ec27c</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OculusWrap, Version=1.6.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\OculusWrap.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>$(SharpDXPackageBinDir)\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler">
+      <HintPath>$(SharpDXPackageBinDir)\SharpDX.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11">
+      <HintPath>$(SharpDXPackageBinDir)\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>$(SharpDXPackageBinDir)\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Toolkit">
+      <HintPath>$(SharpDXPackageBinDir)\SharpDX.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Toolkit.Graphics">
+      <HintPath>$(SharpDXPackageBinDir)\SharpDX.Toolkit.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\Circle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\Cross.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\CustomMarkerDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\CustomMarkerRed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\TrolleyTooltip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.StreetView\StreetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hyperlapse.WindowsProjection\TilePrefetcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Hyperlapse.CacheProvider\MemoryCache.cs" />
+    <Compile Include="Hyperlapse.CacheProvider\MSSQLPureImageCache.cs" />
+    <Compile Include="Hyperlapse.CacheProvider\MySQLPureImageCache.cs" />
+    <Compile Include="Hyperlapse.CacheProvider\PostgreSQLPureImageCache.cs" />
+    <Compile Include="Hyperlapse.CacheProvider\SQLitePureImageCache.cs" />
+    <Compile Include="Hyperlapse.Core\AccessMode.cs" />
+    <Compile Include="Hyperlapse.Core\Delegates.cs" />
+    <Compile Include="Hyperlapse.Core\DirectionsProvider.cs" />
+    <Compile Include="Hyperlapse.Core\Extensions.cs" />
+    <Compile Include="Hyperlapse.Core\GDirections.cs" />
+    <Compile Include="Hyperlapse.Core\GeocodingProvider.cs" />
+    <Compile Include="Hyperlapse.Core\GMaps.cs" />
+    <Compile Include="Hyperlapse.Core\GPoint.cs" />
+    <Compile Include="Hyperlapse.Core\GpsLog.cs" />
+    <Compile Include="Hyperlapse.Core\gpx.cs" />
+    <Compile Include="Hyperlapse.Core\GRect.cs" />
+    <Compile Include="Hyperlapse.Core\GSize.cs" />
+    <Compile Include="Hyperlapse.Core\Interface.cs" />
+    <Compile Include="Hyperlapse.Core\LanguageType.cs" />
+    <Compile Include="Hyperlapse.Core\MapRoute.cs" />
+    <Compile Include="Hyperlapse.Core\MapType.cs" />
+    <Compile Include="Hyperlapse.Core\MouseWheelZoomType.cs" />
+    <Compile Include="Hyperlapse.Core\Placemark.cs" />
+    <Compile Include="Hyperlapse.Core\PointLatLng.cs" />
+    <Compile Include="Hyperlapse.Core\PureImageCache.cs" />
+    <Compile Include="Hyperlapse.Core\PureProjection.cs" />
+    <Compile Include="Hyperlapse.Core\RectLatLng.cs" />
+    <Compile Include="Hyperlapse.Core\RenderMode.cs" />
+    <Compile Include="Hyperlapse.Core\RoutingProvider.cs" />
+    <Compile Include="Hyperlapse.Core\Singleton.cs" />
+    <Compile Include="Hyperlapse.Core\SizeLatLng.cs" />
+    <Compile Include="Hyperlapse.Core\StatusCodes.cs" />
+    <Compile Include="Hyperlapse.Forms\App.cs" />
+    <Compile Include="Hyperlapse.Forms\DemoStuff.cs" />
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\Circle.xaml.cs">
+      <DependentUpon>Circle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\CircleVisual.cs" />
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\Cross.xaml.cs">
+      <DependentUpon>Cross.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\CustomMarkerDemo.xaml.cs">
+      <DependentUpon>CustomMarkerDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\CustomMarkerRed.xaml.cs">
+      <DependentUpon>CustomMarkerRed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\TrolleyTooltip.xaml.cs">
+      <DependentUpon>TrolleyTooltip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.Forms\Map.cs" />
+    <Compile Include="Hyperlapse.Google\GMapProvider.cs" />
+    <Compile Include="Hyperlapse.Google\GoogleHybridMapProvider.cs" />
+    <Compile Include="Hyperlapse.Google\GoogleMapProvider.cs" />
+    <Compile Include="Hyperlapse.Google\GoogleSatelliteMapProvider.cs" />
+    <Compile Include="Hyperlapse.Google\GoogleTerrainMapProvider.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\Cache.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\CacheQueueItem.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\Core.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\DrawTile.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\FastReaderWriterLock.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\FastResourceLock.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\KiberTileCache.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\LoadTask.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\PureImage.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\RawTile.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\AuthMethod.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\AuthNone.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\AuthUserPass.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\IAsyncProxyResult.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\ProxyException.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\ProxySocket.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\Socks4Handler.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\Socks5Handler.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\SocksHandler.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\SocksProxySocket\SocksHttpWebRequest.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\Stuff.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\Tile.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\TileHttpHost.cs" />
+    <Compile Include="Hyperlapse.MapsSupport\TileMatrix.cs" />
+    <Compile Include="Hyperlapse.Projections\MapsLTProjection.cs" />
+    <Compile Include="Hyperlapse.Projections\MapsLTReliefProjection.cs" />
+    <Compile Include="Hyperlapse.Projections\MapsLVProjection.cs" />
+    <Compile Include="Hyperlapse.Projections\MapyCZProjection.cs" />
+    <Compile Include="Hyperlapse.Projections\MercatorProjection.cs" />
+    <Compile Include="Hyperlapse.Projections\MercatorProjectionYandex.cs" />
+    <Compile Include="Hyperlapse.Projections\PlateCarreeProjection.cs" />
+    <Compile Include="Hyperlapse.Projections\PlateCarreeProjectionDarbAe.cs" />
+    <Compile Include="Hyperlapse.Projections\PlateCarreeProjectionPergo.cs" />
+    <Compile Include="Hyperlapse.StreetView\OculusView.cs" />
+    <Compile Include="Hyperlapse.StreetView\PanoramaViewer.cs" />
+    <Compile Include="Hyperlapse.StreetView\StreetView.xaml.cs">
+      <DependentUpon>StreetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hyperlapse.WindowsProjection\GMapControl.cs" />
+    <Compile Include="Hyperlapse.WindowsProjection\GMapImage.cs" />
+    <Compile Include="Hyperlapse.WindowsProjection\GMapMarker.cs" />
+    <Compile Include="Hyperlapse.WindowsProjection\GMapPolygon.cs" />
+    <Compile Include="Hyperlapse.WindowsProjection\GMapRoute.cs" />
+    <Compile Include="Hyperlapse.WindowsProjection\TilePrefetcher.xaml.cs">
+      <DependentUpon>TilePrefetcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Message.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Message.xaml.cs">
+      <DependentUpon>Message.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\bigMarkerGreen.png" />
+    <Resource Include="Hyperlapse.Forms\Hyperlapse.Forms.CustomMarker\red-dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hyperlapse.Forms\Resources\zoom+.png" />
+    <Resource Include="Hyperlapse.Forms\Resources\zoom-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hyperlapse.StreetView\Shaders.fx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SharpDX.2.6.3\build\SharpDX.targets" Condition="Exists('..\packages\SharpDX.2.6.3\build\SharpDX.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SharpDX.2.6.3\build\SharpDX.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SharpDX.2.6.3\build\SharpDX.targets'))" />
+    <Error Condition="!Exists('..\packages\SharpDX.Toolkit.2.6.3\build\SharpDX.Toolkit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SharpDX.Toolkit.2.6.3\build\SharpDX.Toolkit.targets'))" />
+  </Target>
+  <Import Project="..\packages\SharpDX.Toolkit.2.6.3\build\SharpDX.Toolkit.targets" Condition="Exists('..\packages\SharpDX.Toolkit.2.6.3\build\SharpDX.Toolkit.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
